@@ -8,17 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap" rel="stylesheet">
+    <audio id="bg-music" loop>
+        <source src="audio/og pila - bluetooth.mp3" type="audio/mpeg">
+    </audio>
 </head>
 <body>
     <div id="loader-container" class="active">
         <div class="loader"></div>
     </div>
 
-    <div id="content" class="hidden">
+    <div id="enter-overlay" class="hidden">
+        <div class="enter-text">Click to continue</div>
+    </div>
+
+    <div id="content" class="hidden blurry">
         <h1 class="name">nesza</h1>
         <div class="image-container">
             <a href="https://discord.com/users/nesza" target="_blank" class="image-link">
                 <img src="images/discord.png" alt="Discord">
+            </a>
+            <a href="https://t.me/nesza_12" target="_blank" class="image-link">
+                <img src="images/telegram.png" alt="Telegram">
             </a>
             <!-- Add more custom PNGs here -->
         </div>
