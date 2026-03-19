@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <audio id="bg-music" loop>
         <source src="audio/og pila - bluetooth.mp3" type="audio/mpeg">
     </audio>
@@ -31,6 +32,32 @@
                 <img src="images/telegram.png" alt="Telegram">
             </a>
             <!-- Add more custom PNGs here -->
+        </div>
+
+        <!-- Music Player -->
+        <div class="container">
+            <header>
+            </header>
+            <main>
+                <div class="album-art">
+                    <img src="images/monkey.jpg" alt="Album Art" />
+                </div>
+                <div class="player">
+                    <i class="fa fa-repeat" id="restart-btn"></i>
+                    <i class="fa fa-fast-backward" id="rewind-btn"></i>
+                    <i class="fa fa-play" id="play-btn"></i>
+                    <i class="fa fa-fast-forward" id="forward-btn"></i>
+                </div>
+            </main>
+            <footer>
+                <div class="title">op pila - bluetooth</div>
+                <div class="time-tracker">
+                    <div class="timer">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="time">00:80</div>
+                </div>
+            </footer>
         </div>
     </div>
 
