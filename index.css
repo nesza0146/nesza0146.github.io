@@ -1,0 +1,92 @@
+:root {
+  --bg-color: #0c0c0e;
+  --text-color: #ffffff;
+  --accent-color: #514b82;
+  --loader-bg: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Outfit', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s ease, visibility 0.8s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#loader-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 100px; /* Slightly larger for better visibility */
+    height: 80px;
+    --m:no-repeat linear-gradient(90deg,#000 70%,#0000 0);
+    -webkit-mask: 
+      var(--m) calc(0*100%/4) 100%/calc(100%/5) calc(1*100%/5),
+      var(--m) calc(1*100%/4) 100%/calc(100%/5) calc(2*100%/5),
+      var(--m) calc(2*100%/4) 100%/calc(100%/5) calc(3*100%/5),
+      var(--m) calc(3*100%/4) 100%/calc(100%/5) calc(4*100%/5),
+      var(--m) calc(4*100%/4) 100%/calc(100%/5) calc(5*100%/5);
+    background: linear-gradient(var(--accent-color) 0 0) left/0% 100% no-repeat #ddd;
+    animation: l14 2s infinite steps(6);
+  }
+  @keyframes l14 {
+    100% {background-size: 120% 100%}
+  }
+
+#content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+}
+
+#content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.name {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  text-transform: lowercase;
+  background: linear-gradient(135deg, #fff 0%, var(--accent-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 10px 20px rgba(81, 75, 130, 0.3));
+  position: relative;
+}
+
+.name::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+  border-radius: 1px;
+}
