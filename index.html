@@ -15,6 +15,9 @@
     </audio>
 </head>
 <body>
+    <!-- GIF Background -->
+    <div class="gif-bg"></div>
+
     <div id="loader-container" class="active">
         <div class="loader"></div>
     </div>
@@ -24,15 +27,32 @@
     </div>
 
     <div id="content" class="hidden blurry">
+        <!-- Top-left name -->
         <h1 class="name">nesza</h1>
-        <div class="image-container">
-            <a href="https://discord.com/users/tls_raw" target="_blank" class="image-link">
-                <img src="images/discord.png" alt="Discord">
+
+        <!-- Floating social cards -->
+        <div class="cards-area">
+            <!-- Live Discord Profile Card (clickable) -->
+            <a href="https://discord.com/users/nesza" target="_blank" class="card card-profile" id="discord-profile">
+                <div class="profile-header">
+                    <div class="avatar-wrapper">
+                        <img id="discord-avatar" src="images/discord.png" alt="Avatar" class="profile-avatar">
+                        <div id="status-dot" class="status-dot offline"></div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-username" id="discord-username">Loading...</div>
+                        <div class="profile-status-text" id="discord-status">connecting...</div>
+                    </div>
+                </div>
+                <div class="profile-activity" id="discord-activity">
+                </div>
             </a>
-            <a href="https://t.me/nesza_12" target="_blank" class="image-link">
+
+            <!-- Telegram Card -->
+            <a href="https://t.me/nesza_12" target="_blank" class="card card-telegram">
                 <img src="images/telegram.png" alt="Telegram">
+                <span>telegram</span>
             </a>
-            <!-- Add more custom PNGs here -->
         </div>
 
         <!-- Music Player -->
@@ -56,7 +76,7 @@
                     <div class="timer">
                         <div class="bg"></div>
                     </div>
-                    <div class="time">00:80</div>
+                    <div class="time">00:00</div>
                 </div>
             </footer>
         </div>
